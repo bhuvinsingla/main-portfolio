@@ -1,6 +1,12 @@
 import { ExperienceItem, ProjectItem, SkillCategory, CertificateItem, AwardItem } from './types';
 import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
+/** Use for all public assets so paths work on Vercel (respects base URL). */
+export const ASSETS = (path: string) => {
+  const base = (import.meta as unknown as { env?: { BASE_URL?: string } }).env?.BASE_URL ?? '/';
+  return `${base}${path.replace(/^\//, '')}`;
+};
+
 export const PERSONAL_INFO = {
   name: "Bhuvin Singla",
   role: "Full Stack Developer",

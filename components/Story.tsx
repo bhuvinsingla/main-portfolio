@@ -1,5 +1,6 @@
 import React from 'react';
 import { Section } from './Section';
+import { ASSETS } from '../constants';
 import { BookOpen, Mountain, Sparkles, Award, Target, Zap, Quote } from 'lucide-react';
 
 const TRAILHEAD = {
@@ -88,7 +89,7 @@ export const Story: React.FC = () => {
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/50 aspect-video flex items-center justify-center">
               <img
-                src="/pics/expeditioner.png"
+                src={ASSETS('pics/expeditioner.png')}
                 alt="Trailhead Expeditioner"
                 className="w-full h-full object-contain p-6 sm:p-8"
                 onError={(e) => {
@@ -103,7 +104,7 @@ export const Story: React.FC = () => {
           </div>
           {/* <div className="mt-4 flex gap-4 overflow-x-auto pb-2">
             {[
-              { src: '/pics/expeditioner.png', alt: 'Trailhead Expeditioner' },
+              { src: ASSETS('pics/expeditioner.png'), alt: 'Trailhead Expeditioner' },
             ].map((img) => (
               <img
                 key={img.src}
@@ -176,7 +177,7 @@ export const Story: React.FC = () => {
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/50 aspect-video flex items-center justify-center">
               <img
-                src="/pics/antier-solutions.avif"
+                src={ASSETS('pics/antier-solutions.avif')}
                 alt="Blockchain work"
                 className="w-full object-cover"
                 onError={(e) => {
@@ -191,12 +192,12 @@ export const Story: React.FC = () => {
           </div>
           {/* <div className="mt-4 flex gap-4 overflow-x-auto pb-2">
             {[
-              { src: '/pics/antier_logo.jpg', alt: 'Antier logo' },
-              { src: '/pics/antier-solutions-pvt-ltd-industrial-area-chandigarh-search-engine-optimization-services-or7qerzg9f.avif', alt: 'Antier Solutions' },
-              { src: '/pics/blochchain.jpg', alt: 'Blockchain' },
-              { src: '/pics/blockchain-3.jpg', alt: 'Blockchain build' },
-              { src: '/pics/blockchain-4.jpg', alt: 'Smart contract flow' },
-              { src: '/pics/blockchain-5.jpg', alt: 'Web3 UI' },
+              { src: ASSETS('pics/antier_logo.jpg'), alt: 'Antier logo' },
+              { src: ASSETS('pics/antier-solutions-pvt-ltd-industrial-area-chandigarh-search-engine-optimization-services-or7qerzg9f.avif'), alt: 'Antier Solutions' },
+              { src: ASSETS('pics/blochchain.jpg'), alt: 'Blockchain' },
+              { src: ASSETS('pics/blockchain-3.jpg'), alt: 'Blockchain build' },
+              { src: ASSETS('pics/blockchain-4.jpg'), alt: 'Smart contract flow' },
+              { src: ASSETS('pics/blockchain-5.jpg'), alt: 'Web3 UI' },
             ].map((img) => (
               <img
                 key={img.src}
@@ -251,7 +252,7 @@ export const Story: React.FC = () => {
           <div className="mb-8">
             <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/50 aspect-video flex items-center justify-center">
               <img
-                src="/pics/smartdata.jpg"
+                src={ASSETS('pics/smartdata.jpg')}
                 alt="SmartData Enterprises"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -265,7 +266,7 @@ export const Story: React.FC = () => {
             </div>
             <div className="mt-4 flex gap-4 overflow-x-auto pb-2">
               <img src="/pics/smartdata-logo.png" alt="SmartData logo" className="h-24 w-32 object-contain p-2 rounded-lg border border-slate-700 bg-slate-800/40 flex-shrink-0" onError={(e) => (e.target as HTMLImageElement).style.display = 'none'} />
-              <img src="/pics/smartdata-office.jpg" alt="SmartData office" className="h-24 w-32 object-cover rounded-lg border border-slate-700 flex-shrink-0" onError={(e) => (e.target as HTMLImageElement).style.display = 'none'} />
+              <img src={ASSETS('pics/smartdata-office.jpg')} alt="SmartData office" className="h-24 w-32 object-cover rounded-lg border border-slate-700 flex-shrink-0" onError={(e) => (e.target as HTMLImageElement).style.display = 'none'} />
             </div>
           </div>
 

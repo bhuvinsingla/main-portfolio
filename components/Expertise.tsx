@@ -1,5 +1,6 @@
 import React from 'react';
 import { Section } from './Section';
+import { ASSETS } from '../constants';
 import { Mic, AudioLines, Brain, Sparkles, Layers } from 'lucide-react';
 
 const llms = ['GPT‑4 class models', 'Claude', 'Gemini', 'Llama 3', 'Custom fine‑tuned APIs'];
@@ -98,10 +99,10 @@ export const Expertise: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { name: 'Vapi', img: '/pics/vapi.png' },
-                { name: 'Retell', img: '/pics/retell.png' },
-                { name: 'Twilio Voice', img: '/pics/twilio.png' },
-                { name: 'Daily / WebRTC', img: '/pics/daily.png' },
+                { name: 'Vapi', img: ASSETS('pics/vapi.png') },
+                { name: 'Retell', img: ASSETS('pics/retell.png') },
+                { name: 'Twilio Voice', img: ASSETS('pics/twilio.png') },
+                { name: 'Daily / WebRTC', img: ASSETS('pics/daily.png') },
               ].map((tool) => (
                 <div
                   key={tool.name}
