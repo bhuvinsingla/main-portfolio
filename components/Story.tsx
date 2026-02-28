@@ -10,6 +10,47 @@ const TRAILHEAD = {
   trails: 4,
 };
 
+/** Tries srcs in order; shows placeholder if all fail. */
+function FallbackImg({
+  srcs,
+  alt,
+  className,
+  onError,
+  placeholder,
+}: {
+  srcs: string[];
+  alt: string;
+  className?: string;
+  onError?: (e: React.SyntheticEvent<HTMLImageElement>) => void;
+  placeholder?: React.ReactNode;
+}) {
+  const [index, setIndex] = React.useState(0);
+  const [failed, setFailed] = React.useState(false);
+  const currentSrc = srcs[index];
+  const hasMore = index < srcs.length - 1;
+  return (
+    <>
+      {!failed && currentSrc && (
+        <img
+          src={currentSrc}
+          alt={alt}
+          className={className}
+          onError={(e) => {
+            if (hasMore) {
+              setIndex((i) => i + 1);
+            } else {
+              (e.target as HTMLImageElement).style.display = 'none';
+              setFailed(true);
+            }
+            onError?.(e);
+          }}
+        />
+      )}
+      {failed && placeholder}
+    </>
+  );
+}
+
 export const Story: React.FC = () => {
   return (
     <Section id="story" title="My Story" subtitle="Who I am, what I feel, and the journey that shaped me—with a few proverbs along the way.">
@@ -176,18 +217,20 @@ export const Story: React.FC = () => {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/50 aspect-video flex items-center justify-center">
-              <img
-                src={ASSETS('pics/antier-solutions.avif')}
+              <FallbackImg
+                srcs={[
+                  ASSETS('pics/antier-solutions.avif'),
+                  ASSETS('pics/blochchain.jpg'),
+                  ASSETS('pics/antier-solutions-pvt-ltd-industrial-area-chandigarh-search-engine-optimization-services-or7qerzg9f.avif'),
+                ]}
                 alt="Blockchain work"
-                className="w-full object-cover"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                  (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
-                }}
+                className="absolute inset-0 w-full h-full object-cover"
+                placeholder={
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-800/90 text-slate-500 text-sm">
+                    Add Antier image to <code className="text-slate-400">public/pics/</code> (e.g. blochchain.jpg or antier-solutions.avif)
+                  </div>
+                }
               />
-              <div className="hidden absolute inset-0 flex items-center justify-center bg-slate-800/90 text-slate-500 text-sm">
-                Add `public/pics/blochchain.jpg`
-              </div>
             </div>
           </div>
           {/* <div className="mt-4 flex gap-4 overflow-x-auto pb-2">
@@ -251,21 +294,22 @@ export const Story: React.FC = () => {
           {/* SmartData image */}
           <div className="mb-8">
             <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-800/50 aspect-video flex items-center justify-center">
-              <img
-                src={ASSETS('pics/smartdata.jpg')}
+              <FallbackImg
+                srcs={[
+                  ASSETS('pics/smartdata.jpg'),
+                  ASSETS('pics/smartdata-office.jpg'),
+                ]}
                 alt="SmartData Enterprises"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                  (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
-                }}
+                className="w-full h-full object-cover absolute inset-0"
+                placeholder={
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-800/90 text-slate-500 text-sm">
+                    Add SmartData image to <code className="text-slate-400">public/pics/</code> (e.g. smartdata.jpg or smartdata-office.jpg)
+                  </div>
+                }
               />
-              <div className="hidden absolute inset-0 flex items-center justify-center bg-slate-800/90 text-slate-500 text-sm">
-                Add /public/pics/smartdata.jpg
-              </div>
             </div>
             <div className="mt-4 flex gap-4 overflow-x-auto pb-2">
-              <img src="/pics/smartdata-logo.png" alt="SmartData logo" className="h-24 w-32 object-contain p-2 rounded-lg border border-slate-700 bg-slate-800/40 flex-shrink-0" onError={(e) => (e.target as HTMLImageElement).style.display = 'none'} />
+              <img src={ASSETS('pics/smartdata-logo.png')} alt="SmartData logo" className="h-24 w-32 object-contain p-2 rounded-lg border border-slate-700 bg-slate-800/40 flex-shrink-0" onError={(e) => (e.target as HTMLImageElement).style.display = 'none'} />
               <img src={ASSETS('pics/smartdata-office.jpg')} alt="SmartData office" className="h-24 w-32 object-cover rounded-lg border border-slate-700 flex-shrink-0" onError={(e) => (e.target as HTMLImageElement).style.display = 'none'} />
             </div>
           </div>
