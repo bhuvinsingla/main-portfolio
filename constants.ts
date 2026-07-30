@@ -1,4 +1,4 @@
-import { ExperienceItem, ProjectItem, SkillCategory, CertificateItem, AwardItem } from './types';
+﻿import { ExperienceItem, ProjectItem, SkillCategory, CertificateItem, AwardItem } from './types';
 import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 /** Use for all public assets so paths work on Vercel (respects base URL). */
@@ -15,7 +15,7 @@ export const PERSONAL_INFO = {
   location: "Mohali, India · Remote",
   github: "https://github.com/bhuvinsingla",
   linkedin: "https://www.linkedin.com/in/bhuvin-singla/",
-  summary: "Full Stack Developer who builds and ships real products. Proven stack: Next.js, Supabase, Vercel, TailwindCSS, OpenAI & Anthropic APIs. AI-first—Cursor, Claude, and LLMs are part of my daily workflow. High-agency, ownership mindset, and I deliver end-to-end. Strong product design taste and security-conscious.",
+  summary: "Full Stack Developer who builds and ships real products. Proven stack: Next.js, Supabase, Vercel, TailwindCSS, OpenAI & Anthropic APIs. AI-first-Cursor, Claude, and LLMs are part of my daily workflow. High-agency, ownership mindset, and I deliver end-to-end. Strong product design taste and security-conscious.",
   availability: "Remote · Flexible for EST overlap · Open to full-time"
 };
 
@@ -84,10 +84,10 @@ export const PROJECTS: ProjectItem[] = [
     id: 'proj-0a',
     title: "PropCall AI",
     status: "ongoing",
-    description: "Property Management & Lead Generation. AI voice agent converts cold calls into quality leads—handles inbound/outbound calls, queries property DB by location/budget/size, collects customer info, auto-generates leads. Deployed on Vercel.",
+    description: "Property Management & Lead Generation. AI voice agent converts cold calls into quality leads-handles inbound/outbound calls, queries property DB by location/budget/size, collects customer info, auto-generates leads. Deployed on Vercel.",
     techStack: ["Vapi", "Next.js", "Voice AI", "Lead Gen", "Vercel"],
     features: [
-      "Property dealer dashboard—add properties, voice agent has full context.",
+      "Property dealer dashboard-add properties, voice agent has full context.",
       "Inbound/outbound calls, lead collection, export to Google Sheets."
     ],
     link: "https://prop-call-ai.vercel.app/"
@@ -96,11 +96,11 @@ export const PROJECTS: ProjectItem[] = [
     id: 'proj-0b',
     title: "Voice Assistant Portfolio",
     status: "ongoing",
-    description: "Voice assistant showcase across Healthcare, Hotels, Restaurants, Property, Business. Live demo—24/7, natural conversational AI, cost-effective. Tailored solutions for appointment scheduling, bookings, orders, support.",
+    description: "Voice assistant showcase across Healthcare, Hotels, Restaurants, Property, Business. Live demo-24/7, natural conversational AI, cost-effective. Tailored solutions for appointment scheduling, bookings, orders, support.",
     techStack: ["Vapi", "Next.js", "Voice AI", "Conversational AI", "Vercel"],
     features: [
       "Multi-industry demos: healthcare, hotels, restaurants, property, customer support.",
-      "Live voice agent—click to start conversation. 24/7, human-like."
+      "Live voice agent-click to start conversation. 24/7, human-like."
     ],
     link: "https://vapi-bhuvin.vercel.app/"
   },
@@ -111,7 +111,7 @@ export const PROJECTS: ProjectItem[] = [
     techStack: ["Vapi", "LangChain", "OpenAI", "Next.js", "TailwindCSS"],
     features: [
       "Voice interface with tool invocation and personalized flows.",
-      "End-to-end ownership—built, deployed, and iterated in production."
+      "End-to-end ownership-built, deployed, and iterated in production."
     ]
   },
   {
@@ -131,7 +131,7 @@ export const PROJECTS: ProjectItem[] = [
     techStack: ["Solidity", "Web3.js", "Next.js", "IPFS", "MetaMask"],
     features: [
       "ERC-20, ERC-721 smart contracts; secure, deployed on-chain.",
-      "Full product—from contracts to UI to user flows."
+      "Full product-from contracts to UI to user flows."
     ]
   }
 ];

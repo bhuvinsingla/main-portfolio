@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Section } from './Section';
 import { ASSETS } from '../constants';
 import { BookOpen, Mountain, Sparkles, Target, Zap, Quote } from 'lucide-react';
@@ -13,7 +13,7 @@ const TRAILHEAD = {
 
 export const Story: React.FC = () => {
   return (
-    <Section index="02" id="story" title="My Story" subtitle="Who I am, what I feel, and the journey that shaped me—with a few proverbs along the way.">
+    <Section index="02" id="story" title="My Story" subtitle="Who I am, what I feel, and the journey that shaped me-with a few proverbs along the way.">
       <div className="max-w-5xl mx-auto space-y-24">
 
         {/* Proverb intro */}
@@ -26,7 +26,7 @@ export const Story: React.FC = () => {
         </blockquote>
         </Reveal>
 
-        {/* Chapter 1: Salesforce — It all started here */}
+        {/* Chapter 1: Salesforce - It all started here */}
         <Reveal delay={80}>
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
@@ -34,8 +34,8 @@ export const Story: React.FC = () => {
               <BookOpen className="w-6 h-6" />
             </span>
             <div>
-              <h3 className="text-2xl font-bold text-zinc-50">Chapter 1 — It&apos;s All About Salesforce</h3>
-              <p className="text-zinc-400 text-sm">Where I learned that CRM isn&apos;t just data—it&apos;s people and process.</p>
+              <h3 className="text-2xl font-bold text-zinc-50">Chapter 1 - It&apos;s All About Salesforce</h3>
+              <p className="text-zinc-400 text-sm">Where I learned that CRM isn&apos;t just data-it&apos;s people and process.</p>
               <p className="text-zinc-500 text-xs mt-1">
                 Trainee · Salesforce · Apr 2023 – Jun 2023 · ~3 months
               </p>
@@ -46,7 +46,7 @@ export const Story: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="md:col-span-2 glass shape-card shape-story-block p-4 space-y-2">
               <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-500">Salesforce (Trailhead)</p>
-              <p className="text-zinc-200 text-sm font-semibold">Tagline: The #1 AI CRM — We bring companies and customers together.</p>
+              <p className="text-zinc-200 text-sm font-semibold">Tagline: The #1 AI CRM - We bring companies and customers together.</p>
               <p className="text-zinc-300 text-sm">
                 <span className="font-semibold text-zinc-200">What the company deals with:</span>{' '}
                 Cloud CRM platform, automation, analytics, and customer 360 solutions.
@@ -68,7 +68,7 @@ export const Story: React.FC = () => {
             <div className="space-y-4 min-w-0">
               <p className="text-zinc-300 leading-relaxed">
                 My first real step into tech was Salesforce. I didn&apos;t just want to use the platform; I wanted to master it.
-                Trailhead became my playground—every badge a small victory, every trail a new horizon. That consistent learning
+                Trailhead became my playground-every badge a small victory, every trail a new horizon. That consistent learning
                 mindset still defines how I approach every new technology.
               </p>
               {/* Trailhead stats */}
@@ -122,7 +122,7 @@ export const Story: React.FC = () => {
         </div>
         </Reveal>
 
-        {/* Chapter 2: Antier — Blockchain boom */}
+        {/* Chapter 2: Antier - Blockchain boom */}
         <Reveal delay={100}>
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
@@ -130,7 +130,7 @@ export const Story: React.FC = () => {
               <Mountain className="w-6 h-6" />
             </span>
             <div>
-              <h3 className="text-2xl font-bold text-zinc-50">Chapter 2 — Antier Solutions & the Blockchain Boom</h3>
+              <h3 className="text-2xl font-bold text-zinc-50">Chapter 2 - Antier Solutions & the Blockchain Boom</h3>
               <p className="text-zinc-400 text-sm">When the trend was blockchain, I jumped in. And I learned that the real asset was teamwork.</p>
               <p className="text-zinc-500 text-xs mt-1">
                 Industry Integrated On Job Training · Jul 2023 – Dec 2023 · ~6 months
@@ -161,7 +161,7 @@ export const Story: React.FC = () => {
           </div>
 
           <p className="text-zinc-300 leading-relaxed mb-6">
-            Blockchain was everywhere—and I wanted to be in the middle of it. At Antier Solutions I didn&apos;t just write smart contracts;
+            Blockchain was everywhere-and I wanted to be in the middle of it. At Antier Solutions I didn&apos;t just write smart contracts;
             I learned how to ship as part of a team, to align with designers, testers, and product owners while still caring deeply about code quality.
           </p>
 
@@ -184,7 +184,7 @@ export const Story: React.FC = () => {
             <div className="relative glass shape-card shape-story-media aspect-video flex items-center justify-center overflow-hidden">
               <img
                 src={ASSETS('pics/antier-solutions.avif')}
-                alt="Antier Solutions — Blockchain work"
+                alt="Antier Solutions - Blockchain work"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
@@ -217,7 +217,7 @@ export const Story: React.FC = () => {
         </div>
         </Reveal>
 
-        {/* Chapter 3: Dream company — SmartData */}
+        {/* Chapter 3: Dream company - SmartData */}
         <Reveal delay={120}>
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
@@ -225,8 +225,8 @@ export const Story: React.FC = () => {
               <Sparkles className="w-6 h-6" />
             </span>
             <div>
-              <h3 className="text-2xl font-bold text-zinc-50">Chapter 3 — The Dream Come True</h3>
-              <p className="text-zinc-400 text-sm">The company where I came as a noob—and learned I could handle anything.</p>
+              <h3 className="text-2xl font-bold text-zinc-50">Chapter 3 - The Dream Come True</h3>
+              <p className="text-zinc-400 text-sm">The company where I came as a noob-and learned I could handle anything.</p>
               <p className="text-zinc-500 text-xs mt-1">
                 Associate Trainee · SmartData Enterprises Inc. · Sep 2024 – Present · ~1.5 years (ongoing) · Mohali, India
               </p>
@@ -237,7 +237,7 @@ export const Story: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="md:col-span-2 glass shape-card shape-story-block p-4 space-y-2">
               <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-500">SmartData Enterprises Inc.</p>
-              <p className="text-zinc-200 text-sm font-semibold">Tagline: Scaling Expectations — AI-driven, outcome-focused, human-centric.</p>
+              <p className="text-zinc-200 text-sm font-semibold">Tagline: Scaling Expectations - AI-driven, outcome-focused, human-centric.</p>
               <p className="text-zinc-300 text-sm">
                 <span className="font-semibold text-zinc-200">What the company deals with:</span>{' '}
                 Custom software, product engineering, and consulting for global clients.
@@ -281,11 +281,11 @@ export const Story: React.FC = () => {
           <div className="glass shape-card shape-story-block p-8 md:p-10 space-y-6">
             <p className="text-zinc-300 leading-relaxed">
               I joined SmartData as an Associate Trainee. Back then there were too many rules, too many doubts.
-              “Can he do this?” was the unspoken question. I kept my head down and built—video conferencing,
+              “Can he do this?” was the unspoken question. I kept my head down and built-video conferencing,
               AI assistants, real-time systems. I didn&apos;t just follow the rules; I learned why they existed, then how to bend them without breaking them.
             </p>
             <p className="text-zinc-300 leading-relaxed">
-              Slowly the question changed. From “Can he do this?” to “Where is he?” — and then to “He is the one who will do this.”
+              Slowly the question changed. From “Can he do this?” to “Where is he?” - and then to “He is the one who will do this.”
               That shift didn&apos;t come from a title. It came from showing up, shipping, and caring about the outcome.
               SmartData isn&apos;t just my current company; it&apos;s the first place that truly taught me what I&apos;m capable of.
             </p>
@@ -298,7 +298,7 @@ export const Story: React.FC = () => {
         <div className="text-center py-8">
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto flex items-center justify-center gap-2 flex-wrap">
             <Target className="w-5 h-5 text-brand-500" />
-            This is my story—Salesforce, blockchain, and the dream company that believed in me. Always learning. Always building.
+            This is my story-Salesforce, blockchain, and the dream company that believed in me. Always learning. Always building.
           </p>
         </div>
         </Reveal>

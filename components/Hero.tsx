@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight, ChevronDown, MapPin, Sparkles } from 'lucide-react';
 import { PERSONAL_INFO, SOCIAL_LINKS, PROFILE_PHOTO, HERO_ROLES, HERO_STATS } from '../constants';
 import { useTypewriter } from '../hooks/useTypewriter';
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
               {role}<span className="typewriter-cursor">▍</span>
             </p>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-lg mb-6">
-              I build and ship real products — AI voice agents, full-stack apps, and production systems with full ownership.
+              I build and ship real products - AI voice agents, full-stack apps, and production systems with full ownership.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="#projects" className="btn-glow btn-primary group inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-xl text-sm font-medium">

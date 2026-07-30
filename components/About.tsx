@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Section } from './Section';
 import { PERSONAL_INFO, PROFILE_PHOTO_SM } from '../constants';
 import { Reveal } from './Reveal';
@@ -24,7 +24,7 @@ export const About: React.FC = () => {
             </div>
           </div>
           <p className="text-zinc-300 text-lg leading-relaxed mb-6">
-            I build and ship real products—SaaS, AI tools, full-stack apps. High-agency, founder mentality: I own outcomes, not just tasks. AI-first: Cursor, Claude, and LLMs are part of my daily workflow.
+            I build and ship real products-SaaS, AI tools, full-stack apps. High-agency, founder mentality: I own outcomes, not just tasks. AI-first: Cursor, Claude, and LLMs are part of my daily workflow.
           </p>
           <p className="text-zinc-300 text-lg leading-relaxed mb-6">
             Proven stack: Next.js, Supabase, Vercel, TailwindCSS, Shadcn/ui, OpenAI & Anthropic APIs. Remote-ready, flexible for EST overlap.

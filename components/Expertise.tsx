@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Section } from './Section';
 import { ASSETS } from '../constants';
 import { Mic, AudioLines, Brain, Sparkles, Layers } from 'lucide-react';
@@ -20,7 +20,7 @@ export const Expertise: React.FC = () => {
       index="04"
       id="expertise"
       title="Voice Agent Expertise"
-      subtitle="Designing human, fast, and reliable voice agents — LLMs, STT, TTS, RAG, and flows."
+      subtitle="Designing human, fast, and reliable voice agents - LLMs, STT, TTS, RAG, and flows."
     >
       <div className="grid lg:grid-cols-3 gap-8">
         <Reveal className="lg:col-span-1 space-y-5" delay={0}>
@@ -29,7 +29,7 @@ export const Expertise: React.FC = () => {
             voice · llm · flows
           </div>
           <p className="text-zinc-400 text-sm leading-relaxed">
-            I build voice agents that feel less like IVRs and more like real people — streaming STT, low‑latency TTS,
+            I build voice agents that feel less like IVRs and more like real people - streaming STT, low‑latency TTS,
             strong prompt + tool design, and RAG for grounded answers.
           </p>
           <div className="space-y-3">
@@ -38,10 +38,10 @@ export const Expertise: React.FC = () => {
               What matters most
             </h3>
             <ul className="space-y-2 text-sm text-zinc-400">
-              <li>• <span className="text-zinc-300 font-medium">Humanize</span> — natural tone, turn‑taking, graceful fallbacks.</li>
-              <li>• <span className="text-zinc-300 font-medium">Latency obsessed</span> — streaming, pre‑warming, minimal round‑trips.</li>
-              <li>• <span className="text-zinc-300 font-medium">Efficient prompts</span> — structured tools, predictable costs.</li>
-              <li>• <span className="text-zinc-300 font-medium">Task‑first flows</span> — goal‑driven conversations.</li>
+              <li>• <span className="text-zinc-300 font-medium">Humanize</span> - natural tone, turn‑taking, graceful fallbacks.</li>
+              <li>• <span className="text-zinc-300 font-medium">Latency obsessed</span> - streaming, pre‑warming, minimal round‑trips.</li>
+              <li>• <span className="text-zinc-300 font-medium">Efficient prompts</span> - structured tools, predictable costs.</li>
+              <li>• <span className="text-zinc-300 font-medium">Task‑first flows</span> - goal‑driven conversations.</li>
             </ul>
           </div>
         </Reveal>

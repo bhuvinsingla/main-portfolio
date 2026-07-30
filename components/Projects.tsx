@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Section } from './Section';
 import { PROJECTS } from '../constants';
 import { Code2, Layers, ArrowUpRight } from 'lucide-react';
@@ -69,7 +69,7 @@ export const Projects: React.FC = () => {
   const [featured, ...rest] = PROJECTS;
 
   return (
-    <Section index="05" id="projects" title="Shipped Products" subtitle="Real products I built and deployed — no fluff, just what ships.">
+    <Section index="05" id="projects" title="Shipped Products" subtitle="Real products I built and deployed - no fluff, just what ships.">
       <div className="projects-bento">
         <Reveal className="projects-bento__featured" variant="scale">
           <ProjectCard project={featured} featured shapeClass="shape-project-featured" />
