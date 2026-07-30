@@ -19,6 +19,22 @@ export const PERSONAL_INFO = {
   availability: "Remote · Flexible for EST overlap · Open to full-time"
 };
 
+export const PROFILE_PHOTO = ASSETS('pics/profile.jpg');
+export const PROFILE_PHOTO_SM = ASSETS('pics/profile-sm.jpg');
+
+export const HERO_ROLES = [
+  'Full Stack Developer',
+  'AI Voice Engineer',
+  'Next.js · Supabase · Vercel',
+  'Product Builder',
+];
+
+export const HERO_STATS = [
+  { label: 'Years building', value: '2+' },
+  { label: 'Products shipped', value: '6+' },
+  { label: 'Based in', value: 'Mohali' },
+];
+
 export const SOCIAL_LINKS = [
   { label: 'GitHub', href: PERSONAL_INFO.github, icon: Github },
   { label: 'LinkedIn', href: PERSONAL_INFO.linkedin, icon: Linkedin },

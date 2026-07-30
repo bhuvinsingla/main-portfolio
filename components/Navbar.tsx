@@ -7,68 +7,72 @@ export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 40);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
     { label: 'About', href: '#about' },
-    { label: 'My Story', href: '#story' },
+    { label: 'Story', href: '#story' },
     { label: 'Skills', href: '#skills' },
-    { label: 'My Expertise', href: '#expertise' },
+    { label: 'Expertise', href: '#expertise' },
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-surface-900/95 backdrop-blur-md shadow-lg border-b border-slate-800' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold text-white font-mono tracking-tighter">
-          {PERSONAL_INFO.name.split(' ')[0]}<span className="text-brand-500">.dev</span>
-        </a>
+    <>
+      <nav className="nav-shell fixed top-0 left-0 right-0 z-50 px-4 pt-4 pointer-events-none">
+        <div
+          className={`mx-auto max-w-4xl pointer-events-auto transition-all duration-500 rounded-2xl ${
+            isScrolled
+              ? 'glass-strong shadow-2xl shadow-black/40 border border-white/10 px-4 py-2'
+              : 'bg-transparent px-2 py-2'
+          }`}
+        >
+          <div className="flex items-center justify-between h-12">
+            <a href="#" className="text-sm font-semibold text-zinc-100 font-mono tracking-tight pl-2">
+              {PERSONAL_INFO.name.split(' ')[0]}<span className="text-brand-400">.dev</span>
+            </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex gap-8">
+            <div className="hidden md:flex gap-1">
+              {navLinks.map((link) => (
+                <a key={link.label} href={link.href} className="nav-link-anim px-3 py-1.5 text-xs font-medium rounded-lg hover:bg-white/5">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+            <button
+              className="md:hidden text-zinc-100 p-2 rounded-lg hover:bg-white/5"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            >
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        className={`md:hidden fixed top-[4.5rem] left-4 right-4 z-50 glass-strong rounded-2xl overflow-hidden transition-all duration-300 ${
+          isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <div className="p-4 flex flex-col gap-1">
           {navLinks.map((link) => (
-            <a 
-              key={link.label} 
-              href={link.href} 
-              className="text-slate-300 hover:text-brand-400 text-sm font-medium transition-colors"
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-zinc-400 hover:text-brand-400 py-3 px-3 rounded-xl hover:bg-white/5 transition-colors text-sm"
             >
               {link.label}
             </a>
           ))}
         </div>
-
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
       </div>
-
-      {/* Mobile Nav */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-slate-900 border-b border-slate-800 absolute w-full p-4">
-          <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <a 
-                key={link.label} 
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-slate-300 hover:text-white py-2 block"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
+    </>
   );
 };
