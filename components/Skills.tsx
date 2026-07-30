@@ -23,13 +23,13 @@ export const Skills: React.FC = () => {
                 <div className="p-2.5 rounded-xl bg-brand-500/10 border border-brand-500/20 group-hover:border-brand-500/40 transition-colors">
                   {getIcon(group.category)}
                 </div>
-                <h3 className="font-semibold text-zinc-800 text-sm">{group.category}</h3>
+                <h3 className="font-semibold text-zinc-100 text-sm">{group.category}</h3>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-2.5 py-1 bg-zinc-100 text-zinc-600 rounded-md text-xs border border-zinc-200/80 hover:text-brand-600 hover:border-brand-500/30 transition-all duration-300 cursor-default"
+                    className="px-2.5 py-1 bg-white/5 text-zinc-400 rounded-md text-xs border border-white/5 hover:text-brand-300 hover:border-brand-500/30 transition-all duration-300 cursor-default"
                   >
                     {skill}
                   </span>

@@ -14,7 +14,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="relative bg-surface-50 min-h-screen text-zinc-800 font-sans selection:bg-brand-500/20 selection:text-brand-900 overflow-x-hidden">
+    <div className="relative bg-surface-900 min-h-screen text-zinc-100 font-sans selection:bg-brand-500/30 selection:text-white overflow-x-hidden">
       <PageBackdrop />
       <CursorSpotlight />
       <ScrollProgress />

@@ -1,13 +1,13 @@
-/* Light smooth portfolio theme */
+/* Dark premium portfolio theme */
 
 :root {
   --accent: #6366f1;
   --accent-2: #8b5cf6;
-  --bg: #f7f8fc;
-  --text: #18181b;
-  --text-muted: #71717a;
-  --glass: rgba(255, 255, 255, 0.82);
-  --glass-border: rgba(15, 23, 42, 0.07);
+  --bg: #0a0a0f;
+  --text: #fafafa;
+  --text-muted: #a1a1aa;
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --mx: 50%;
@@ -75,15 +75,15 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 24px -8px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.35);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(17, 17, 24, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 8px 32px -12px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px -12px rgba(0, 0, 0, 0.45);
 }
 
 .gradient-text {
@@ -131,9 +131,9 @@
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.08), transparent 55%),
-              radial-gradient(ellipse 60% 40% at 100% 50%, rgba(167, 139, 250, 0.06), transparent 50%),
-              radial-gradient(ellipse 50% 40% at 0% 80%, rgba(199, 210, 254, 0.15), transparent 50%),
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.12), transparent 55%),
+              radial-gradient(ellipse 60% 40% at 100% 50%, rgba(139, 92, 246, 0.08), transparent 50%),
+              radial-gradient(ellipse 50% 40% at 0% 80%, rgba(99, 102, 241, 0.06), transparent 50%),
               var(--bg);
 }
 
@@ -141,8 +141,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 10%, transparent 70%);
 }
@@ -158,7 +158,7 @@
   height: min(50vw, 480px);
   top: -8%;
   right: -5%;
-  background: rgba(165, 180, 252, 0.35);
+  background: rgba(99, 102, 241, 0.22);
   animation: mesh-drift-a 28s ease-in-out infinite;
 }
 
@@ -167,14 +167,14 @@
   height: min(45vw, 420px);
   bottom: 10%;
   left: -8%;
-  background: rgba(196, 181, 253, 0.28);
+  background: rgba(139, 92, 246, 0.18);
   animation: mesh-drift-b 32s ease-in-out infinite;
 }
 
 .page-backdrop__noise {
   position: absolute;
   inset: 0;
-  opacity: 0.018;
+  opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -248,7 +248,7 @@
 }
 
 .nav-link-anim:hover {
-  color: #18181b;
+  color: #fafafa;
 }
 
 .reveal.is-visible {
@@ -298,13 +298,12 @@
   padding: 0.45rem 1.1rem;
   margin-right: 0.65rem;
   border-radius: 9999px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.72rem;
-  color: #71717a;
+  color: #a1a1aa;
   white-space: nowrap;
-  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.06);
 }
 
 .social-icon-pop {
@@ -313,7 +312,7 @@
 
 .social-icon-pop:hover {
   transform: translateY(-2px) scale(1.06);
-  color: #6366f1;
+  color: #818cf8;
 }
 
 .status-pill {
@@ -333,7 +332,7 @@
   pointer-events: none;
   background: radial-gradient(
     500px circle at var(--mx) var(--my),
-    rgba(99, 102, 241, 0.05),
+    rgba(99, 102, 241, 0.09),
     transparent 42%
   );
 }
@@ -345,7 +344,7 @@
   font-size: clamp(8rem, 22vw, 18rem);
   line-height: 1;
   font-weight: 400;
-  color: rgba(15, 23, 42, 0.04);
+  color: rgba(255, 255, 255, 0.025);
   pointer-events: none;
   user-select: none;
   letter-spacing: -0.04em;
@@ -365,25 +364,27 @@
   }
   .bento-cell--photo { grid-column: 1 / 6; grid-row: 1 / 3; }
   .bento-cell--intro { grid-column: 6 / 13; grid-row: 1; }
-  .bento-cell--stats { grid-column: 6 / 12; grid-row: 2; }
-  .bento-cell--meta { grid-column: 12 / 13; grid-row: 2; min-width: 0; }
-  .bento-cell--code { grid-column: 6 / 13; grid-row: 3; }
+  .hero-bento > .bento-cell--stat:nth-child(3) { grid-column: 6 / 9; grid-row: 2; }
+  .hero-bento > .bento-cell--stat:nth-child(4) { grid-column: 9 / 11; grid-row: 2; }
+  .hero-bento > .bento-cell--stat:nth-child(5) { grid-column: 11 / 13; grid-row: 2; }
+  .bento-cell--meta { grid-column: 6 / 9; grid-row: 3; }
+  .bento-cell--code { grid-column: 9 / 13; grid-row: 3; }
 }
 
 .bento-cell {
   position: relative;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.03);
   border: none;
   padding: 1.25rem;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transition: background 0.45s var(--ease-smooth), filter 0.45s var(--ease-smooth);
-  filter: drop-shadow(0 0 0 1px rgba(15, 23, 42, 0.07)) drop-shadow(0 4px 20px -6px rgba(15, 23, 42, 0.08));
+  filter: drop-shadow(0 0 0 1px rgba(255, 255, 255, 0.08));
 }
 
 .bento-cell:hover {
-  background: rgba(255, 255, 255, 0.92);
-  filter: drop-shadow(0 0 0 1px rgba(99, 102, 241, 0.2)) drop-shadow(0 12px 28px -8px rgba(99, 102, 241, 0.12));
+  background: rgba(255, 255, 255, 0.055);
+  filter: drop-shadow(0 0 0 1px rgba(99, 102, 241, 0.35)) drop-shadow(0 12px 32px rgba(0, 0, 0, 0.35));
 }
 
 /* Hero bento — each cell a different silhouette */
@@ -395,17 +396,37 @@
   clip-path: polygon(0 0, calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 0 100%);
 }
 
-.bento-cell--stats {
-  clip-path: none;
-  padding: 1rem;
+.bento-cell--stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 6.5rem;
+  padding: 1rem 0.85rem;
 }
 
-.bento-stat {
-  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.06);
+.shape-stat-1 {
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+}
+
+.shape-stat-2 {
+  clip-path: polygon(50% 0%, 92% 20%, 92% 80%, 50% 100%, 8% 80%, 8% 20%);
+}
+
+.shape-stat-3 {
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
+}
+
+.bento-cell--meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 6.5rem;
 }
 
 .shape-meta {
-  clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 50% 100%, 0% 85%, 0% 15%);
+  clip-path: polygon(12% 0%, 88% 0%, 100% 12%, 100% 88%, 50% 100%, 0% 88%, 0% 12%);
 }
 
 .shape-code {
@@ -478,7 +499,7 @@
 }
 
 .section-index {
-  background: linear-gradient(180deg, rgba(99, 102, 241, 0.55) 0%, rgba(99, 102, 241, 0.12) 100%);
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.35) 0%, rgba(255, 255, 255, 0.04) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -517,18 +538,18 @@
 
 .bento-featured {
   min-height: 100%;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(255, 255, 255, 0.85) 50%);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(255, 255, 255, 0.02) 50%);
 }
 
 .shape-card {
   border: none !important;
   border-radius: 0 !important;
-  filter: drop-shadow(0 0 0 1px rgba(15, 23, 42, 0.06)) drop-shadow(0 4px 16px -6px rgba(15, 23, 42, 0.06));
+  filter: drop-shadow(0 0 0 1px rgba(255, 255, 255, 0.07));
   transition: filter 0.5s var(--ease-smooth), background 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
 }
 
 .shape-card:hover {
-  filter: drop-shadow(0 0 0 1px rgba(99, 102, 241, 0.22)) drop-shadow(0 16px 32px -8px rgba(99, 102, 241, 0.12));
+  filter: drop-shadow(0 0 0 1px rgba(99, 102, 241, 0.3)) drop-shadow(0 16px 40px rgba(0, 0, 0, 0.4));
 }
 
 .shape-about {

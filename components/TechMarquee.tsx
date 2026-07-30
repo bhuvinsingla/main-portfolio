@@ -7,7 +7,7 @@ export const TechMarquee: React.FC = () => {
   const row = [...ITEMS, ...ITEMS];
 
   return (
-    <div className="relative z-10 py-5 border-y border-zinc-200/80 overflow-hidden marquee-mask">
+    <div className="relative z-10 py-5 border-y border-white/5 overflow-hidden marquee-mask">
       <div className="marquee-track">
         {row.map((skill, i) => (
           <span key={`${skill}-${i}`} className="marquee-item">
