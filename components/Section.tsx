@@ -23,13 +23,13 @@ export const Section: React.FC<SectionProps> = ({ id, index, title, subtitle, ch
             )}
             <div>
               {title && (
-                <h2 className="font-display text-3xl md:text-[2.75rem] text-zinc-50 mb-3 relative inline-block tracking-tight leading-tight">
+                <h2 className="font-display text-3xl md:text-[2.75rem] text-zinc-900 mb-3 relative inline-block tracking-tight leading-tight">
                   {title}
                   <span className="section-title-line absolute -bottom-1 left-0 w-full max-w-[120px] h-px bg-gradient-to-r from-brand-500 via-accent-500 to-transparent block" />
                 </h2>
               )}
               {subtitle && (
-                <p className="text-zinc-400 mt-1 max-w-2xl text-base md:text-lg leading-relaxed">{subtitle}</p>
+                <p className="text-zinc-600 mt-1 max-w-2xl text-base md:text-lg leading-relaxed">{subtitle}</p>
               )}
             </div>
           </div>

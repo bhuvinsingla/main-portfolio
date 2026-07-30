@@ -1,12 +1,3 @@
-export interface ExperienceItem {
-  id: string;
-  role: string;
-  company: string;
-  period: string;
-  location?: string;
-  description: string[];
-}
-
 export interface ProjectItem {
   id: string;
   title: string;
@@ -25,7 +16,6 @@ export interface SkillCategory {
 export interface CertificateItem {
   title: string;
   issuer: string;
-  details?: string;
 }
 
 export interface AwardItem {

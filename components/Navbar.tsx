@@ -27,25 +27,25 @@ export const Navbar: React.FC = () => {
         <div
           className={`mx-auto max-w-4xl pointer-events-auto transition-all duration-500 rounded-2xl ${
             isScrolled
-              ? 'glass-strong shadow-2xl shadow-black/40 border border-white/10 px-4 py-2'
+              ? 'glass-strong shadow-lg shadow-zinc-900/5 border border-zinc-200/80 px-4 py-2'
               : 'bg-transparent px-2 py-2'
           }`}
         >
           <div className="flex items-center justify-between h-12">
-            <a href="#" className="text-sm font-semibold text-zinc-100 font-mono tracking-tight pl-2">
-              {PERSONAL_INFO.name.split(' ')[0]}<span className="text-brand-400">.dev</span>
+            <a href="#" className="text-sm font-semibold text-zinc-800 font-mono tracking-tight pl-2">
+              {PERSONAL_INFO.name.split(' ')[0]}<span className="text-brand-600">.dev</span>
             </a>
 
             <div className="hidden md:flex gap-1">
               {navLinks.map((link) => (
-                <a key={link.label} href={link.href} className="nav-link-anim px-3 py-1.5 text-xs font-medium rounded-lg hover:bg-white/5">
+                <a key={link.label} href={link.href} className="nav-link-anim px-3 py-1.5 text-xs font-medium rounded-lg hover:bg-zinc-100/80">
                   {link.label}
                 </a>
               ))}
             </div>
 
             <button
-              className="md:hidden text-zinc-100 p-2 rounded-lg hover:bg-white/5"
+              className="md:hidden text-zinc-800 p-2 rounded-lg hover:bg-zinc-100/80"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
               key={link.label}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-zinc-400 hover:text-brand-400 py-3 px-3 rounded-xl hover:bg-white/5 transition-colors text-sm"
+              className="text-zinc-600 hover:text-brand-600 py-3 px-3 rounded-xl hover:bg-zinc-100/80 transition-colors text-sm"
             >
               {link.label}
             </a>
